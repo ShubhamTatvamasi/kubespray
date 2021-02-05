@@ -18,7 +18,7 @@ git checkout ${KUBESPRAY_RELEASE}
 
 steup inventory for your cluster:
 ```bash
-cp -rfp inventory/sample inventory/$CLUSTER_NAME
+cp -rfp inventory/sample inventory/${CLUSTER_NAME}
 ```
 
 Update Ansible inventory:
