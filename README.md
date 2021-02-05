@@ -13,7 +13,7 @@ Prepare KubeSpray:
 git clone https://github.com/kubernetes-sigs/kubespray.git
 cd kubespray
 git fetch --all
-git checkout $KUBESPRAY_RELEASE
+git checkout ${KUBESPRAY_RELEASE}
 ```
 
 steup inventory for your cluster:
@@ -23,6 +23,13 @@ cp -rfp inventory/sample inventory/$CLUSTER_NAME
 
 Update Ansible inventory:
 ```bash
-CONFIG_FILE=inventory/$CLUSTER_NAME/hosts.yml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
+CONFIG_FILE=inventory/${CLUSTER_NAME}/hosts.yml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
+Install kubespray:
+```bash
+ansible-playbook -i inventory/${CLUSTER_NAME}/inventory.ini cluster.yml \
+  -u root \
+  -b -v \
+  --private-key=~/.ssh/id_ed25519
+```
