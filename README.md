@@ -53,3 +53,8 @@ ansible-playbook -i inventory/${CLUSTER_NAME}/hosts.yml cluster.yml \
   -b -v \
   --private-key=~/.ssh/id_ed25519
 ```
+
+Get cluster config file: 
+```bash
+ssh root@1.1.1.1 'cat /root/.kube/config' > ~/.kube/config
+```
