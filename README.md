@@ -2,7 +2,7 @@
 
 ### Setup Node
 
-Install Docker on Nodes:
+Setup Docker repo on Nodes:
 ```bash
 sudo apt install -y \
     apt-transport-https \
@@ -17,8 +17,6 @@ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
-
-sudo apt install docker-ce docker-ce-cli containerd.io
 ```
 ---
 
