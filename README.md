@@ -35,6 +35,7 @@ git clone -b ${KUBESPRAY_RELEASE} https://github.com/kubernetes-sigs/kubespray.g
 
 steup inventory for your cluster:
 ```bash
+cd kubespray
 cp -rfp inventory/sample inventory/${CLUSTER_NAME}
 ```
 
