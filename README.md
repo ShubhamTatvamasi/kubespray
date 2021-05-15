@@ -41,7 +41,8 @@ cp -rfp inventory/sample inventory/${CLUSTER_NAME}
 
 Update Ansible inventory:
 ```bash
-CONFIG_FILE=inventory/${CLUSTER_NAME}/hosts.yml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
+CONFIG_FILE=inventory/${CLUSTER_NAME}/hosts.yml \
+  python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
 Install kubespray:
