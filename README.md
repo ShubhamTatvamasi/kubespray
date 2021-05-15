@@ -55,5 +55,6 @@ ansible-playbook -i inventory/${CLUSTER_NAME}/hosts.yml cluster.yml \
 
 Get cluster config file: 
 ```bash
-ssh root@1.1.1.1 'cat /root/.kube/config' > ~/.kube/config
+ssh root@1.1.1.1 'cat /root/.kube/config' > config
+export KUBECONFIG=$PWD/config
 ```
